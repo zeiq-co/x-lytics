@@ -30,9 +30,9 @@ const OurWork = () => (
         </div>
       </div>
       <div className="columns is-centered">
-        <WorkFeature img={web} alt="Web apps" title="Web" />
+        <WorkFeature img={web} alt="web apps" title="Web" />
         <WorkFeature img={mobile} alt="mobile apps" title="Mobile" />
-        <WorkFeature img={voice} alt="Voice" title="Voice" />
+        <WorkFeature img={voice} alt="voice" title="Voice" />
         <WorkFeature img={entertainment} alt="games" title="Entertainment" />
       </div>
     </div>
