@@ -5,7 +5,7 @@ import WorkFeature from './WorkFeature';
 import web from '../../static/images/xlytics/web.png';
 import mobile from '../../static/images/xlytics/mobile.png';
 import voice from '../../static/images/xlytics/speaker.png';
-import entertainment from '../../static/images/xlytics/entertainment-icon.png';
+import entertainment from '../../static/images/xlytics/enter.png';
 
 const HelpText = styled.p`
   margin-top: 1.5rem;
