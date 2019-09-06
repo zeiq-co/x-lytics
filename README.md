@@ -1,8 +1,6 @@
-# Packrs.co
+# x-lytics
 
-Deliver anything, anywhere, anytime
-
-[Website](https://www.packrs.co/)
+x-lytics website
 
 ## Stack
 

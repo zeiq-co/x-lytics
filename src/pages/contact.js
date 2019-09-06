@@ -39,25 +39,22 @@ const Contact = () => (
               <span role="img" aria-label="Round Pushpin">
                 📍
               </span>{' '}
-              Punjab, India
+              London, UK
             </p>
             <p className="is-4">
               <span role="img" aria-label="e-mail">
                 📧
               </span>{' '}
-              <a href="mailto:hi@packrs.co">hi@packrs.co</a>
+              <a href="mailto:hi@packrs.co">hi@xlytics.co</a>
             </p>
             <p>
               <span role="img" aria-label="telephone">
                 ☎️
               </span>{' '}
-              <a href="tel:+911815195423">+91-181-5195423</a>
+              <a href="tel:+911815195423">+44-123123123</a>
             </p>
             <p className="control">
-              <a
-                href="https://packrs.freshdesk.com/support/tickets/new"
-                target="_blank"
-                rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <button type="submit" className="button is-secondary is-medium">
                   Get in touch
                 </button>

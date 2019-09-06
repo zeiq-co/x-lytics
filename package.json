@@ -1,17 +1,17 @@
 {
-  "name": "packrs-website",
-  "description": "packrs official website",
+  "name": "x-lytics",
+  "description": "x-lytics official website",
   "version": "2.0.1",
   "author": "Parminder Klair",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zeiq-co/packrs-website.git"
+    "url": "git+https://github.com/zeiq-co/x-lytics.git"
   },
   "bugs": {
-    "url": "https://github.com/zeiq-co/packrs-website/issues"
+    "url": "https://github.com/zeiq-co/x-lytics/issues"
   },
-  "homepage": "https://github.com/zeiq-co/packrs-website#readme",
+  "homepage": "https://github.com/zeiq-co/x-lytics#readme",
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop",

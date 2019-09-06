@@ -15,8 +15,8 @@ export default class IndexPage extends React.Component {
     return (
       <Layout hideHeader>
         <Seo
-          title="Get anything from anywhere you want"
-          description="Packrs Delivery"
+          title="Xlytics website"
+          description="Xlytics"
           url={config.siteUrl}
           image={config.image}
         />
