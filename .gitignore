@@ -1,7 +1,6 @@
 # Build output
 public/
 .cache/
-.vscode/
 
 # Dependencies
 node_modules/
