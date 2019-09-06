@@ -19,7 +19,7 @@ const GuideInfo = () => (
   <Section className="section">
     <div className="container">
       <div className="columns">
-        <div className="column">
+        <div className="is-offset-one-quarter column">
           <h1 className="title is-2">
             Our guide to launching a successful digital product.
           </h1>

@@ -9,7 +9,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Container = styled.div`
-  min-height: 70vh;
+  min-height: 90vh;
 `;
 
 const IndexLayout = ({ children, hideHeader }) => (

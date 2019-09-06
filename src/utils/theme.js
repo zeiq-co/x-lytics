@@ -2,9 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset-advanced';
 import { darken, lighten } from 'polished';
 
-const mainBrandColor = '#EC5D51';
+const mainBrandColor = '#405AD1';
 const lightShades = '#F9F9F9';
-const darkAccent = '#726699';
+const darkAccent = '#0C77D3';
 const darkShades = '#303030';
 
 export const theme = {
@@ -26,8 +26,8 @@ export const theme = {
 
   primaryColor: mainBrandColor,
   borderColor: '#e0e6ef',
-  backgroundColor: '#ffc000',
-  backgroundDark: '#f2b704',
+  backgroundColor: '#F99838',
+  backgroundDark: darken(0.06, '#F99838'),
   lightHeading: '#676767',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
@@ -42,7 +42,7 @@ export const theme = {
   textColorLite: '#8B8989',
   menuTintColor: darkAccent,
   primaryFontFamily: "'Helvetica Neue', sans-serif",
-  secondaryFontFamily: "'Open Sans', sans-serif",
+  secondaryFontFamily: "'Helvetica Neue', sans-serif",
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
@@ -61,7 +61,12 @@ const GlobalStyle = createGlobalStyle`
   }
   .button {
     font-family: ${theme.primaryFontFamily};
+    padding: 1.5rem;
   }
+  .button.is-rounded {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
   p {
     line-height: 1.5rem;
   }
@@ -90,11 +95,14 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${theme.darkAccent};
     transition: background-color 0.2s ease;
     :hover {
-      background-color: ${darken(0.06, theme.darkAccent)};  
-    } 
-  } 
+      background-color: ${darken(0.06, theme.darkAccent)};
+    }
+  }
   .button, .input, .card {
     box-shadow: ${theme.boxShadow};
+  }
+  .button.is-large {
+    font-size: 1.2rem;
   }
   .has-text-warning {
     color: ${theme.lightAccent} !important;
