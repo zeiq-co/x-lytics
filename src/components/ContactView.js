@@ -17,7 +17,7 @@ const ContactView = () => (
             <img
               className="is-rounded"
               src="https://bulma.io/images/placeholders/256x256.png"
-              alt=""
+              alt="avatar"
             />
           </figure>
         </div>
