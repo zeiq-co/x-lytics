@@ -2,10 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import WorkFeature from './WorkFeature';
-import web from '../../static/images/xlytics/web.png';
-import mobile from '../../static/images/xlytics/mobile.png';
-import voice from '../../static/images/xlytics/speaker.png';
-import entertainment from '../../static/images/xlytics/enter.png';
 
 const HelpText = styled.p`
   margin-top: 1.5rem;
@@ -23,7 +19,9 @@ class OurWork extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
-              <h1 className="title is-2 has-text-centered">{home.workTitle}</h1>
+              <h1 className="title is-size-3-mobile has-text-centered">
+                {home.workTitle}
+              </h1>
               <HelpText className=" has-text-centered">
                 {home.workSubtitle}
               </HelpText>

@@ -1,13 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Section = styled.section`
-  .title {
-    font-size: 3.4rem;
-    font-weight: 700;
+  .columns {
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      display: flex;
+    }
   }
-  .subtitle {
-    font-size: 3.4rem;
+  .column:last-child {
+    align-self: center;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      display: flex;
+    }
   }
   h1 {
     margin-bottom: 1rem;
@@ -39,9 +46,11 @@ class HomeHero extends React.Component {
                     {home.homePrimaryTitle}
                   </h1>
                   <HelpText>{home.homePrimarySubtitle}</HelpText>
-                  <a className="button is-primary is-medium is-rounded has-text-weight-bold">
-                    Book a Discovery Call
-                  </a>
+                  <Link
+                    to="/"
+                    className="button is-primary is-medium is-rounded has-text-weight-bold">
+                    {home.homePrimaryButton}
+                  </Link>
                 </div>
               </section>
             </div>

@@ -48,11 +48,11 @@ const IndexLayout = ({ children, hideHeader }) => {
           render={data => {
             const contact = data.contentfulFooter;
             return (
-              <>
+              <div>
                 {!hideHeader && <Header />}
                 <Container>{children}</Container>
                 <Footer contact={contact} />
-              </>
+              </div>
             );
           }}
         />

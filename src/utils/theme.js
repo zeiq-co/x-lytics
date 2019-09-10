@@ -58,6 +58,7 @@ const GlobalStyle = createGlobalStyle`
   }
   .title {
     font-family: ${theme.primaryFontFamily};
+    font-size: 2.5rem;
   }
   .button {
     font-family: ${theme.primaryFontFamily};

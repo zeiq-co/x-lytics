@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import config from '../utils/config';
 import FooterHeading from './FooterHeading';
@@ -40,6 +41,15 @@ const Section = styled.section`
 
 const PolicyWrapper = styled.div`
   margin-top: 0.5rem;
+  display: flex;
+  @media screen and (max-width: 768px) {
+    display: grid;
+  }
+  .has-text-weight-bold {
+    @media screen and (max-width: 768px) {
+      margin: 1.2rem 0rem;
+    }
+  }
 `;
 
 const Navigation = styled.div`
@@ -79,19 +89,31 @@ class Footer extends React.Component {
                   {contact.footerSubheading}
                 </h4>
                 <FooterHeading heading="COMPANY NUMBER" />
-                <PolicyWrapper className="is-flex">
+                <PolicyWrapper>
                   <h4 className="has-text-weight-bold margin">
                     {contact.companyContact}
                   </h4>
-                  <a className="has-text-weight-bold margin">Privacy Policy</a>
-                  <a className="has-text-weight-bold">Cookie Policy</a>
+                  <Link to="/" className="has-text-weight-bold margin">
+                    Privacy Policy
+                  </Link>
+                  <Link to="/" className="has-text-weight-bold">
+                    Cookie Policy
+                  </Link>
                 </PolicyWrapper>
                 <Navigation>
                   <FooterHeading heading="NAVIGATION" />
-                  <a className="has-text-weight-bold">Design Sprints</a>
-                  <a className="has-text-weight-bold">Design Sprint Training</a>
-                  <a className="has-text-weight-bold">About</a>
-                  <a className="has-text-weight-bold">Blog</a>
+                  <Link to="/" className="has-text-weight-bold">
+                    Design Sprints
+                  </Link>
+                  <Link to="/" className="has-text-weight-bold">
+                    Design Sprint Training
+                  </Link>
+                  <Link to="/" className="has-text-weight-bold">
+                    About
+                  </Link>
+                  <Link to="/" className="has-text-weight-bold">
+                    Blog
+                  </Link>
                 </Navigation>
               </div>
               <InfoContainer className="column">

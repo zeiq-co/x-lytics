@@ -19,7 +19,7 @@ class WorkProcess extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
-              <h1 className="title is-2 has-text-centered">
+              <h1 className="title is-size-3-mobile has-text-centered">
                 {home.homeSecondaryTitle}
               </h1>
               <HelpText className=" has-text-centered">

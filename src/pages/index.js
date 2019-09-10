@@ -16,6 +16,7 @@ export const indexQuery = graphql`
     contentfulHome {
       homePrimaryTitle
       homePrimarySubtitle
+      homePrimaryButton
       homePrimaryImage {
         file {
           url
@@ -27,6 +28,7 @@ export const indexQuery = graphql`
       workSubtitle
       guideTitle
       guideSubtitle
+      guideButton
       guideImage {
         file {
           url
@@ -66,6 +68,11 @@ export const indexQuery = graphql`
         contactSubtitle
       }
       contactDetails
+      contactImage {
+        file {
+          url
+        }
+      }
       footerHeading
       footerSubheading
       companyContact
