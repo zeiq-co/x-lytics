@@ -28,7 +28,9 @@ export const indexQuery = graphql`
       guideTitle
       guideSubtitle
       guideImage {
-        id
+        file {
+          url
+        }
       }
     }
   }
@@ -53,9 +55,9 @@ export default class IndexPage extends React.Component {
               <React.Fragment>
                 <Header />
                 <HomeHero home={home} />
-                <WorkProcess />
-                <OurWork />
-                <GuideInfo />
+                <WorkProcess home={home} />
+                <OurWork home={home} />
+                <GuideInfo home={home} />
                 <ContactView />
               </React.Fragment>
             );

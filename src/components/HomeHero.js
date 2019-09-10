@@ -38,11 +38,7 @@ class HomeHero extends React.Component {
                   <h1 className="title is-size-3-mobile">
                     {home.homePrimaryTitle}
                   </h1>
-                  <HelpText>
-                    We&apos;re a digital product studio that helps tech focussed
-                    businesses design and build digital products and services,
-                    quickly.
-                  </HelpText>
+                  <HelpText>{home.homePrimarySubtitle}</HelpText>
                   <a className="button is-primary is-medium is-rounded has-text-weight-bold">
                     Book a Discovery Call
                   </a>

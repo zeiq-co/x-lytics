@@ -15,28 +15,28 @@ const Section = styled.section`
   }
 `;
 
-const GuideInfo = () => (
-  <Section className="section">
-    <div className="container">
-      <div className="columns">
-        <div className="is-offset-one-quarter column">
-          <h1 className="title is-2">
-            Our guide to launching a successful digital product.
-          </h1>
-          <p className="is-size-4">
-            Read our 8 Secrets to designing, building and launching successful
-            digital products.
-          </p>
-          <a className="button is-primary is-large is-rounded has-text-weight-bold">
-            Download the guide
-          </a>
+class GuideInfo extends React.Component {
+  render() {
+    const { home } = this.props;
+    return (
+      <Section className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="is-offset-one-quarter column">
+              <h1 className="title is-2">{home.guideTitle}</h1>
+              <p className="is-size-4">{home.guideSubtitle}</p>
+              <a className="button is-primary is-large is-rounded has-text-weight-bold">
+                Download the guide
+              </a>
+            </div>
+            <div className="column">
+              <img src={home.guideImage.file.url} alt="Guide Book" />
+            </div>
+          </div>
         </div>
-        <div className="column">
-          <img src={guide} alt="Guide Book" />
-        </div>
-      </div>
-    </div>
-  </Section>
-);
+      </Section>
+    );
+  }
+}
 
 export default GuideInfo;
