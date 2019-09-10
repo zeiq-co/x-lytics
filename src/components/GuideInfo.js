@@ -9,6 +9,12 @@ const Section = styled.section`
       display: flex;
     }
   }
+  .column:last-child {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
   img {
     height: auto;
     width: 40%;
@@ -16,6 +22,9 @@ const Section = styled.section`
   p {
     margin: 2rem 4rem 3rem 0rem;
     line-height: 2.5rem;
+    @media screen and (max-width: 768px) {
+      margin: 3rem 0;
+    }
   }
 `;
 
@@ -26,9 +35,11 @@ class GuideInfo extends React.Component {
       <Section className="section">
         <div className="container">
           <div className="columns">
-            <div className="is-offset-one-quarter column">
+            <div className="is-offset-one-quarter column has-text-centered-mobile">
               <h1 className="title is-size-3-mobile">{home.guideTitle}</h1>
-              <p className="is-size-4">{home.guideSubtitle}</p>
+              <p className="is-size-4 has-text-centered-mobile">
+                {home.guideSubtitle}
+              </p>
               <a className="button is-primary is-large is-rounded has-text-weight-bold">
                 {home.guideButton}
               </a>

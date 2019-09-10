@@ -62,6 +62,9 @@ const Navigation = styled.div`
 
 const InfoContainer = styled.div`
   padding: 2rem 10rem;
+  @media only screen and (max-width: 1095px) and (min-width: 769px) {
+    padding: 2rem 4rem;
+  }
   @media screen and (max-width: 768px) {
     padding: 0;
   }

@@ -3,9 +3,14 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   padding: 3rem 3rem 0rem;
-
+  @media only screen and (max-width: 1095px) and (min-width: 769px) {
+    padding: 3rem 2rem 0rem;
+  }
   h1 {
     margin: 3rem 0rem;
+    @media only screen and (max-width: 1095px) and (min-width: 769px) {
+      font-size: 1rem !important;
+    }
   }
 `;
 
@@ -16,6 +21,11 @@ const HelpText = styled.p`
   font-weight: 300;
   margin-bottom: 2.5rem;
   padding: 0rem 2.5rem;
+  @media only screen and (max-width: 1095px) and (min-width: 769px) {
+    margin-top: 0;
+    font-size: 16px;
+    padding: 0;
+  }
   @media screen and (max-width: 768px) {
     padding: 0;
   }

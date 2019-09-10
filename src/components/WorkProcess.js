@@ -22,7 +22,7 @@ class WorkProcess extends React.Component {
               <h1 className="title is-size-3-mobile has-text-centered">
                 {home.homeSecondaryTitle}
               </h1>
-              <HelpText className=" has-text-centered">
+              <HelpText className="has-text-centered">
                 {home.homeSecondarySubtitle}
               </HelpText>
             </div>
