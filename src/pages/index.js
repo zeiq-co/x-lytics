@@ -33,6 +33,21 @@ export const indexQuery = graphql`
         }
       }
     }
+    allContentfulWorkItem {
+      edges {
+        node {
+          id
+          title
+          subtitle
+          buttonText
+          icon {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -50,12 +65,12 @@ export default class IndexPage extends React.Component {
         <StaticQuery
           query={indexQuery}
           render={data => {
-            const { contentfulHome: home } = data;
+            const { contentfulHome: home, allContentfulWorkItem: work } = data;
             return (
               <React.Fragment>
                 <Header />
                 <HomeHero home={home} />
-                <WorkProcess home={home} />
+                <WorkProcess home={home} work={work.edges} />
                 <OurWork home={home} />
                 <GuideInfo home={home} />
                 <ContactView />

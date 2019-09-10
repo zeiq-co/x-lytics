@@ -2,9 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import WorkStep from './WorkStep';
-import ideaImg from '../../static/images/xlytics/ideas.png';
-import rocketImg from '../../static/images/xlytics/rocket.png';
-import core from '../../static/images/xlytics/core.png';
 
 const HelpText = styled.p`
   margin-top: 1.5rem;
@@ -16,7 +13,7 @@ const HelpText = styled.p`
 
 class WorkProcess extends React.Component {
   render() {
-    const { home } = this.props;
+    const { home, work } = this.props;
     return (
       <section className="section">
         <div className="container">
@@ -31,27 +28,15 @@ class WorkProcess extends React.Component {
             </div>
           </div>
           <div className="columns">
-            <WorkStep
-              img={ideaImg}
-              alt="Ideas"
-              title="Validate Ideas"
-              subtitle="We use the Design Sprint to validate ideas before wasting time and money on them."
-              btnText="Design Sprints"
-            />
-            <WorkStep
-              img={rocketImg}
-              alt="Build Products"
-              title="Build digital products"
-              subtitle="Unlike a lot of agencies; we don't just design stuff. We build whatever needs to be built."
-              btnText="Development"
-            />
-            <WorkStep
-              img={core}
-              alt="Our Methods"
-              title="Teach our methods"
-              subtitle="We train consultants, product teams and other agencies on how to use our methods."
-              btnText="Training"
-            />
+            {work.map(item => (
+              <WorkStep
+                key={item.node.id}
+                img={item.node.icon.file.url}
+                title={item.node.title}
+                subtitle={item.node.subtitle}
+                btnText={item.node.buttonText}
+              />
+            ))}
           </div>
         </div>
       </section>
