@@ -48,6 +48,32 @@ export const indexQuery = graphql`
         }
       }
     }
+    allContentfulOurWork {
+      edges {
+        node {
+          title
+          image {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+    contentfulFooter {
+      contactTitle
+      contactSubtitle {
+        contactSubtitle
+      }
+      contactDetails
+      footerHeading
+      footerSubheading
+      companyContact
+      emailAddress
+      phoneNumber
+      adressOne
+      addressTwo
+    }
   }
 `;
 
@@ -65,15 +91,20 @@ export default class IndexPage extends React.Component {
         <StaticQuery
           query={indexQuery}
           render={data => {
-            const { contentfulHome: home, allContentfulWorkItem: work } = data;
+            const {
+              contentfulHome: home,
+              allContentfulWorkItem: work,
+              allContentfulOurWork: ourWork,
+              contentfulFooter: contact,
+            } = data;
             return (
-              <React.Fragment>
+              <React.Fragment contact={contact}>
                 <Header />
                 <HomeHero home={home} />
                 <WorkProcess home={home} work={work.edges} />
-                <OurWork home={home} />
+                <OurWork home={home} ourWork={ourWork.edges} />
                 <GuideInfo home={home} />
-                <ContactView />
+                <ContactView contact={contact} />
               </React.Fragment>
             );
           }}

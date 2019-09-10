@@ -17,7 +17,7 @@ const HelpText = styled.p`
 
 class OurWork extends React.Component {
   render() {
-    const { home } = this.props;
+    const { home, ourWork } = this.props;
     return (
       <section className="section">
         <div className="container">
@@ -30,14 +30,13 @@ class OurWork extends React.Component {
             </div>
           </div>
           <div className="columns is-centered">
-            <WorkFeature img={web} alt="web apps" title="Web" />
-            <WorkFeature img={mobile} alt="mobile apps" title="Mobile" />
-            <WorkFeature img={voice} alt="voice" title="Voice" />
-            <WorkFeature
-              img={entertainment}
-              alt="games"
-              title="Entertainment"
-            />
+            {ourWork.map(item => (
+              <WorkFeature
+                key={item.node.id}
+                img={item.node.image.file.url}
+                title={item.node.title}
+              />
+            ))}
           </div>
         </div>
       </section>

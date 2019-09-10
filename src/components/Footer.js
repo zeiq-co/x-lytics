@@ -65,75 +65,74 @@ const Icons = styled.div`
   }
 `;
 
-const Footer = () => (
-  <Section className="section">
-    <div className="container">
-      <footer className="footer">
-        <div className="columns">
-          <div className="column is-5">
-            <h1 className="title is-1">
-              Let’s build something great together.
-            </h1>
-            <h4 className="has-text-weight-bold space">
-              Copyright 2019 Sidekick Digital - All rights reserved.
-            </h4>
-            <FooterHeading heading="COMPANY NUMBER" />
-            <PolicyWrapper className="is-flex">
-              <h4 className="has-text-weight-bold margin">08897147</h4>
-              <a className="has-text-weight-bold margin">Privacy Policy</a>
-              <a className="has-text-weight-bold">Cookie Policy</a>
-            </PolicyWrapper>
-            <Navigation>
-              <FooterHeading heading="NAVIGATION" />
-              <a className="has-text-weight-bold">Design Sprints</a>
-              <a className="has-text-weight-bold">Design Sprint Training</a>
-              <a className="has-text-weight-bold">About</a>
-              <a className="has-text-weight-bold">Blog</a>
-            </Navigation>
-          </div>
-          <InfoContainer className="column">
-            <FooterHeading heading="NEW BUSINESS" size />
-            <a href="mailto:" className="is-size-4">
-              hello@sidekickdigital.co.uk
-            </a>
-            <FooterHeading heading="PHONE" size />
-            <a href="tel:" className="is-size-4">
-              01553 750 006
-            </a>
-            <FooterHeading heading="ADDRESS" size />
-            <h3 className="title is-4">
-              Sidekick Digital King’s Lynn Innovation Centre King’s Lynn Norfolk
-              PE30 5BY
-            </h3>
-            <FooterHeading heading="ADDRESS" size />
-            <h3 className="title is-4">
-              Sidekick Digital St John's Innovation Centre Cowley Road Cambridge
-              CB4 0WS
-            </h3>
-            <FooterHeading heading="SOCIAL" size />
-            <Icons>
-              <a
-                target="_blank"
-                href={config.instagram}
-                rel="noopener noreferrer">
-                <span className="icon has-text-info">
-                  <i className="fab fa-instagram" />
-                </span>
-              </a>
-              <a
-                target="_blank"
-                href={config.instagram}
-                rel="noopener noreferrer">
-                <span className="icon has-text-info">
-                  <i className="fab fa-twitter-square" />
-                </span>
-              </a>
-            </Icons>
-          </InfoContainer>
+class Footer extends React.Component {
+  render() {
+    const { contact } = this.props;
+    return (
+      <Section className="section">
+        <div className="container">
+          <footer className="footer">
+            <div className="columns">
+              <div className="column is-5">
+                <h1 className="title is-1">{contact.footerHeading}</h1>
+                <h4 className="has-text-weight-bold space">
+                  {contact.footerSubheading}
+                </h4>
+                <FooterHeading heading="COMPANY NUMBER" />
+                <PolicyWrapper className="is-flex">
+                  <h4 className="has-text-weight-bold margin">
+                    {contact.companyContact}
+                  </h4>
+                  <a className="has-text-weight-bold margin">Privacy Policy</a>
+                  <a className="has-text-weight-bold">Cookie Policy</a>
+                </PolicyWrapper>
+                <Navigation>
+                  <FooterHeading heading="NAVIGATION" />
+                  <a className="has-text-weight-bold">Design Sprints</a>
+                  <a className="has-text-weight-bold">Design Sprint Training</a>
+                  <a className="has-text-weight-bold">About</a>
+                  <a className="has-text-weight-bold">Blog</a>
+                </Navigation>
+              </div>
+              <InfoContainer className="column">
+                <FooterHeading heading="NEW BUSINESS" size />
+                <a href="mailto:" className="is-size-4">
+                  {contact.emailAddress}
+                </a>
+                <FooterHeading heading="PHONE" size />
+                <a href="tel:" className="is-size-4">
+                  {contact.phoneNumber}
+                </a>
+                <FooterHeading heading="ADDRESS" size />
+                <h3 className="title is-4">{contact.adressOne}</h3>
+                <FooterHeading heading="ADDRESS" size />
+                <h3 className="title is-4">{contact.addressTwo}</h3>
+                <FooterHeading heading="SOCIAL" size />
+                <Icons>
+                  <a
+                    target="_blank"
+                    href={config.instagram}
+                    rel="noopener noreferrer">
+                    <span className="icon has-text-info">
+                      <i className="fab fa-instagram" />
+                    </span>
+                  </a>
+                  <a
+                    target="_blank"
+                    href={config.instagram}
+                    rel="noopener noreferrer">
+                    <span className="icon has-text-info">
+                      <i className="fab fa-twitter-square" />
+                    </span>
+                  </a>
+                </Icons>
+              </InfoContainer>
+            </div>
+          </footer>
         </div>
-      </footer>
-    </div>
-  </Section>
-);
+      </Section>
+    );
+  }
+}
 
 export default Footer;
