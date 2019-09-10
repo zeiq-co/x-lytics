@@ -47,7 +47,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
-        icon: './static/images/logo-sq.jpg',
+        icon: './static/images/favicon.png',
       },
     },
     `gatsby-plugin-offline`,
