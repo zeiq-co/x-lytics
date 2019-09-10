@@ -25,31 +25,38 @@ const HelpText = styled.p`
   margin-bottom: 2.5rem;
 `;
 
-const HomeHero = () => (
-  <Section className="section">
-    <div className="container">
-      <div className="columns">
-        <div className="column is-half">
-          <section className="hero is-medium">
-            <div className="hero-body">
-              <h1 className="title is-size-3-mobile">Great products, fast.</h1>
-              <HelpText>
-                We&apos;re a digital product studio that helps tech focussed
-                businesses design and build digital products and services,
-                quickly.
-              </HelpText>
-              <a className="button is-primary is-medium is-rounded has-text-weight-bold">
-                Book a Discovery Call
-              </a>
+class HomeHero extends React.Component {
+  render() {
+    const { home } = this.props;
+    return (
+      <Section className="section">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-half">
+              <section className="hero is-medium">
+                <div className="hero-body">
+                  <h1 className="title is-size-3-mobile">
+                    {home.homePrimaryTitle}
+                  </h1>
+                  <HelpText>
+                    We&apos;re a digital product studio that helps tech focussed
+                    businesses design and build digital products and services,
+                    quickly.
+                  </HelpText>
+                  <a className="button is-primary is-medium is-rounded has-text-weight-bold">
+                    Book a Discovery Call
+                  </a>
+                </div>
+              </section>
             </div>
-          </section>
+            <div className="column">
+              <img src={home.homePrimaryImage.file.url} alt="Mobile" />
+            </div>
+          </div>
         </div>
-        <div className="column">
-          <img src="/images/mobile-new.png" alt="Packrs android store" />
-        </div>
-      </div>
-    </div>
-  </Section>
-);
+      </Section>
+    );
+  }
+}
 
 export default HomeHero;

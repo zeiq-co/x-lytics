@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
 import config from '../utils/config';
 import Seo from '../components/Seo';
@@ -10,6 +11,29 @@ import OurWork from '../components/OurWork';
 import GuideInfo from '../components/GuideInfo';
 import ContactView from '../components/ContactView';
 
+export const indexQuery = graphql`
+  query Home {
+    contentfulHome {
+      homePrimaryTitle
+      homePrimarySubtitle
+      homePrimaryImage {
+        file {
+          url
+        }
+      }
+      homeSecondaryTitle
+      homeSecondarySubtitle
+      workTitle
+      workSubtitle
+      guideTitle
+      guideSubtitle
+      guideImage {
+        id
+      }
+    }
+  }
+`;
+
 export default class IndexPage extends React.Component {
   render() {
     return (
@@ -20,12 +44,23 @@ export default class IndexPage extends React.Component {
           url={config.siteUrl}
           image={config.image}
         />
-        <Header />
-        <HomeHero />
-        <WorkProcess />
-        <OurWork />
-        <GuideInfo />
-        <ContactView />
+
+        <StaticQuery
+          query={indexQuery}
+          render={data => {
+            const { contentfulHome: home } = data;
+            return (
+              <React.Fragment>
+                <Header />
+                <HomeHero home={home} />
+                <WorkProcess />
+                <OurWork />
+                <GuideInfo />
+                <ContactView />
+              </React.Fragment>
+            );
+          }}
+        />
       </Layout>
     );
   }
