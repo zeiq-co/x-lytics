@@ -73,13 +73,6 @@ export const indexQuery = graphql`
           url
         }
       }
-      footerHeading
-      footerSubheading
-      companyContact
-      emailAddress
-      phoneNumber
-      adressOne
-      addressTwo
     }
   }
 `;

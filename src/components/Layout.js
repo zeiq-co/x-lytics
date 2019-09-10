@@ -12,11 +12,6 @@ import Footer from './Footer';
 const query = graphql`
   query LayoutQuery {
     contentfulFooter {
-      contactTitle
-      contactSubtitle {
-        contactSubtitle
-      }
-      contactDetails
       footerHeading
       footerSubheading
       companyContact
