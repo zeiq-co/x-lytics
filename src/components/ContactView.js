@@ -26,7 +26,7 @@ class ContactView extends React.Component {
               </figure>
             </div>
             <div className="column is-4 is-hidden-tablet">
-              <figure className="image is-128x128">
+              <figure className="image">
                 <img
                   className="is-rounded"
                   src={contact.contactImage.file.url}

@@ -87,7 +87,9 @@ class Footer extends React.Component {
           <footer className="footer">
             <div className="columns">
               <div className="column is-5">
-                <h1 className="title is-1">{contact.footerHeading}</h1>
+                <h1 className="title is-1 is-size-3-mobile">
+                  {contact.footerHeading}
+                </h1>
                 <h4 className="has-text-weight-bold space">
                   {contact.footerSubheading}
                 </h4>
