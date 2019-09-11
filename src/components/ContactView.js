@@ -13,7 +13,7 @@ class ContactView extends React.Component {
   render() {
     const { contact } = this.props;
     return (
-      <Section className="section">
+      <Section className="section" id="contact-view">
         <div className="container">
           <div className="columns">
             <div className="column is-4">

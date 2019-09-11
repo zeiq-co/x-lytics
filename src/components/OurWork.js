@@ -23,7 +23,7 @@ class OurWork extends React.Component {
   render() {
     const { home, ourWork } = this.props;
     return (
-      <Section className="section">
+      <Section className="section" id="our-work">
         <div className="container">
           <div className="columns">
             <div className="column is-half is-offset-one-quarter first">

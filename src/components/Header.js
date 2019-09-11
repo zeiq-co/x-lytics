@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Section = styled.section`
   padding: 1rem 1.5rem;
@@ -103,18 +104,18 @@ export default class Header extends React.Component {
             </div>
             <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
               <div className="navbar-end">
-                <Link to="/" className="navbar-item">
+                <AnchorLink href="#work-process" className="navbar-item">
                   Design Sprints
-                </Link>
-                <Link to="/" className="navbar-item">
+                </AnchorLink>
+                <AnchorLink href="#our-work" className="navbar-item">
                   Design Sprint Training
-                </Link>
-                <Link to="/" className="navbar-item">
+                </AnchorLink>
+                <AnchorLink href="#guide-info" className="navbar-item">
                   About
-                </Link>
-                <Link to="/" className="navbar-item">
+                </AnchorLink>
+                <AnchorLink href="#contact-view" className="navbar-item">
                   Blog
-                </Link>
+                </AnchorLink>
                 <div className="navbar-item">
                   <div className="buttons">
                     <Link

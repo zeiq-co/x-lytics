@@ -23,7 +23,7 @@ class WorkProcess extends React.Component {
   render() {
     const { home, work } = this.props;
     return (
-      <Section className="section">
+      <Section className="section" id="work-process">
         <div className="container">
           <div className="columns">
             <div className="column is-half is-offset-one-quarter first">

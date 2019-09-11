@@ -32,7 +32,7 @@ class GuideInfo extends React.Component {
   render() {
     const { home } = this.props;
     return (
-      <Section className="section">
+      <Section className="section" id="guide-info">
         <div className="container">
           <div className="columns">
             <div className="is-offset-one-quarter column has-text-centered-mobile">
