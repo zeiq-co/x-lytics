@@ -123,11 +123,11 @@ class Footer extends React.Component {
               </div>
               <InfoContainer className="column">
                 <FooterHeading heading="NEW BUSINESS" size />
-                <a href="mailto:" className="is-size-4">
+                <a href={`mailto:${contact.email}`} className="is-size-4">
                   {contact.emailAddress}
                 </a>
                 <FooterHeading heading="PHONE" size />
-                <a href="tel:" className="is-size-4">
+                <a href={`tel:${contact.telephone}`} className="is-size-4">
                   {contact.phoneNumber}
                 </a>
                 <FooterHeading heading="ADDRESS" size />
@@ -136,22 +136,22 @@ class Footer extends React.Component {
                 <h3 className="title is-4">{contact.addressTwo}</h3>
                 <FooterHeading heading="SOCIAL" size />
                 <Icons>
-                  <a
+                  <Link
                     target="_blank"
-                    href={config.instagram}
+                    to={contact.instagramLink}
                     rel="noopener noreferrer">
                     <span className="icon has-text-info">
                       <i className="fab fa-instagram" />
                     </span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     target="_blank"
-                    href={config.instagram}
+                    to={contact.twitterLink}
                     rel="noopener noreferrer">
                     <span className="icon has-text-info">
                       <i className="fab fa-twitter-square" />
                     </span>
-                  </a>
+                  </Link>
                 </Icons>
               </InfoContainer>
             </div>
