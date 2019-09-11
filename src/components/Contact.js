@@ -4,12 +4,10 @@ import styled from 'styled-components';
 import ContactForm from './ContactForm';
 
 const Container = styled.section`
-  padding: 3rem 1.5rem 0rem 1.5rem;
+  padding: 3rem 1.5rem 3rem 1.5rem;
   background-color: #e1eff2;
-
   @media only screen and (max-width: 768px) {
-    padding-bottom: 3rem;
-    margin-bottom: -2rem;
+    padding: 1rem 1.5rem 3rem 1.5rem;
   }
 
   .columns {
@@ -48,6 +46,7 @@ const Container = styled.section`
     font-size: 1rem;
     font-weight: 400;
     transition: opacity 0.2s;
+    padding: 0rem 1rem;
     :hover {
       color: #fff;
       opacity: 0.6;
