@@ -1,9 +1,9 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import config from '../utils/config';
-import Seo from '../components/Seo';
 import Layout from '../components/Layout';
+import Seo from '../components/Seo';
+import config from '../utils/config';
 import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
 import WorkProcess from '../components/WorkProcess';
