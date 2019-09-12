@@ -6,6 +6,9 @@ const Section = styled.section`
   p {
     margin: 2rem 4rem 3rem 0rem;
     line-height: 2.5rem;
+    @media only screen and (max-width: 768px) {
+      margin: 0;
+    }
   }
 `;
 
@@ -34,12 +37,14 @@ class ContactView extends React.Component {
                 />
               </figure>
             </div>
-            <div className="column is-6">
-              <h1 className="title is-size-3-mobile">{contact.contactTitle}</h1>
-              <p className="is-size-5">
+            <div className="column is-6 has-text-centered-mobile">
+              <h1 className="title is-size-4-mobile has-text-centered-mobile">
+                {contact.contactTitle}
+              </h1>
+              <p className="is-size-5 has-text-centered-mobile">
                 {contact.contactSubtitle.contactSubtitle}
               </p>
-              <p className="is-size-5">
+              <p className="is-size-5 has-text-centered-mobile">
                 {contact.contactDetails}{' '}
                 <Link to="/" className="has-text-weight-bold">
                   contact us.

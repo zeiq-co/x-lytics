@@ -42,10 +42,12 @@ class HomeHero extends React.Component {
             <div className="column is-half">
               <section className="hero is-medium">
                 <div className="hero-body">
-                  <h1 className="title is-size-3-mobile">
+                  <h1 className="title is-size-4-mobile">
                     {home.homePrimaryTitle}
                   </h1>
-                  <HelpText>{home.homePrimarySubtitle}</HelpText>
+                  <HelpText className="is-size-5-mobile">
+                    {home.homePrimarySubtitle}
+                  </HelpText>
                   <Link
                     to="/"
                     className="button is-primary is-medium is-rounded has-text-weight-bold">

@@ -3,14 +3,6 @@ import styled from 'styled-components';
 
 import WorkStep from './WorkStep';
 
-const Section = styled.section`
-  .first {
-    @media only screen and (max-width: 600px) {
-      padding: 0rem !important;
-    }
-  }
-`;
-
 const HelpText = styled.p`
   margin-top: 1.5rem;
   font-size: 24px;
@@ -23,11 +15,19 @@ class WorkProcess extends React.Component {
   render() {
     const { home, work } = this.props;
     return (
-      <Section className="section" id="work-process">
+      <section className="section" id="work-process">
         <div className="container">
           <div className="columns">
-            <div className="column is-half is-offset-one-quarter first">
-              <h1 className="title is-size-3-mobile has-text-centered">
+            <div className="column is-half is-offset-one-quarter is-hidden-mobile">
+              <h1 className="title has-text-centered">
+                {home.homeSecondaryTitle}
+              </h1>
+              <HelpText className="has-text-centered">
+                {home.homeSecondarySubtitle}
+              </HelpText>
+            </div>
+            <div className="column is-half is-hidden-tablet">
+              <h1 className="title is-size-4-mobile has-text-centered">
                 {home.homeSecondaryTitle}
               </h1>
               <HelpText className="has-text-centered">
@@ -47,7 +47,7 @@ class WorkProcess extends React.Component {
             ))}
           </div>
         </div>
-      </Section>
+      </section>
     );
   }
 }

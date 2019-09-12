@@ -36,7 +36,7 @@ class GuideInfo extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="is-offset-one-quarter column has-text-centered-mobile">
-              <h1 className="title is-size-3-mobile">{home.guideTitle}</h1>
+              <h1 className="title is-size-4-mobile">{home.guideTitle}</h1>
               <p className="is-size-4 has-text-centered-mobile">
                 {home.guideSubtitle}
               </p>
