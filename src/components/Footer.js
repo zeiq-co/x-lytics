@@ -130,9 +130,13 @@ class Footer extends React.Component {
                   {contact.phoneNumber}
                 </a>
                 <FooterHeading heading="ADDRESS" size />
-                <h3 className="title is-4">{contact.adressOne}</h3>
+                <h3 className="title is-4 is-size-5-mobile">
+                  {contact.adressOne}
+                </h3>
                 <FooterHeading heading="ADDRESS" size />
-                <h3 className="title is-4">{contact.addressTwo}</h3>
+                <h3 className="title is-4 is-size-5-mobile">
+                  {contact.addressTwo}
+                </h3>
                 <FooterHeading heading="SOCIAL" size />
                 <Icons>
                   <Link

@@ -34,7 +34,7 @@ const HelpText = styled.p`
 const WorkStep = ({ img, alt, title, subtitle, btnText }) => (
   <Wrapper className="column has-text-centered">
     <img src={img} alt={alt} />
-    <h1 className="title is-5">{title}</h1>
+    <h1 className="title is-4">{title}</h1>
     <HelpText>{subtitle}</HelpText>
     <a className="button is-primary is-large is-fullwidth is-rounded has-text-weight-bold">
       {btnText}

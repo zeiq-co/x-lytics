@@ -4,16 +4,13 @@ import styled from 'styled-components';
 import ContactForm from './ContactForm';
 
 const Container = styled.section`
-  padding: 3rem 1.5rem 3rem 1.5rem;
-  background-color: #e1eff2;
+  background-color: #f4f4f4;
   @media only screen and (max-width: 768px) {
     padding: 1rem 1.5rem 3rem 1.5rem;
   }
 
   .columns {
     background-color: #ffffff;
-    margin-left: 0rem !important;
-    margin-right: 0rem !important;
   }
 
   .column {
@@ -22,34 +19,19 @@ const Container = styled.section`
   }
 
   .input {
-    height: 2.5rem;
-    background-color: #fff;
-    border-color: #fff;
-    border-radius: none;
-    box-shadow: none;
-    ::placeholder {
-      opacity: 1;
-    }
+    box-shadow: rgba(0, 0, 0, 0.08) 2px 2px 2px;
   }
 
   textarea {
-    background-color: #fff;
-    border-color: #fff;
-    border-radius: none;
-    box-shadow: none;
-    ::placeholder {
-      opacity: 1;
-    }
+    box-shadow: rgba(0, 0, 0, 0.08) 2px 2px 2px;
   }
 
   .button {
-    font-size: 1rem;
-    font-weight: 400;
-    transition: opacity 0.2s;
+    transition: opacity 0.5s;
     padding: 0rem 1rem;
     :hover {
       color: #fff;
-      opacity: 0.6;
+      opacity: 1;
     }
   }
 
@@ -70,7 +52,7 @@ const Contact = () => (
     <div className="container">
       <div className="columns">
         <div className="column has-text-centered is-7">
-          <h1 className="subtitle is-2 text">GET IN TOUCH</h1>
+          <h1 className="title is-size-3-mobile">GET IN TOUCH</h1>
           <h4 className="subtitle is-6 text">
             ECO House, Lea Road, Waltham Abbey, Hertfordshire, EN9 1AS
           </h4>
