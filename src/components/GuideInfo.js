@@ -3,12 +3,6 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   background-color: ${props => props.theme.backgroundDark};
-  .columns {
-    @media screen and (max-width: 768px) {
-      flex-direction: column-reverse;
-      display: flex;
-    }
-  }
   .column:last-child {
     @media screen and (max-width: 768px) {
       display: flex;
@@ -18,6 +12,9 @@ const Section = styled.section`
   img {
     height: auto;
     width: 40%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   p {
     margin: 2rem 4rem 3rem 0rem;
