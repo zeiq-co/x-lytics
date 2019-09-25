@@ -139,22 +139,23 @@ class Footer extends React.Component {
                 </h3>
                 <FooterHeading heading="SOCIAL" size />
                 <Icons>
-                  <Link
+                  {/* Note that external links still use `a` tags. */}
+                  <a
                     target="_blank"
-                    to={contact.instagramLink}
+                    href={contact.instagramLink}
                     rel="noopener noreferrer">
                     <span className="icon has-text-info">
                       <i className="fab fa-instagram" />
                     </span>
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     target="_blank"
-                    to={contact.twitterLink}
+                    href={contact.twitterLink}
                     rel="noopener noreferrer">
                     <span className="icon has-text-info">
                       <i className="fab fa-twitter-square" />
                     </span>
-                  </Link>
+                  </a>
                 </Icons>
               </InfoContainer>
             </div>
