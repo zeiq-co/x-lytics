@@ -12,7 +12,7 @@ x-lytics website
 - Fork or download this repository
 - Ready!
 
-To change site config `./utils/config.js`
+To change site config. `./utils/config.js`
 
 ## Setup
 
