@@ -1,6 +1,6 @@
 # x-lytics
 
-x-lytics website
+x-lytics website.
 
 ## Stack
 
