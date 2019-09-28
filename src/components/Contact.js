@@ -45,6 +45,10 @@ const Container = styled.section`
   .is-7 {
     align-self: center;
   }
+
+  .field {
+    width: 100%;
+  }
 `;
 
 const Contact = () => (

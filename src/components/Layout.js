@@ -19,8 +19,8 @@ const query = graphql`
       phoneNumber
       adressOne
       addressTwo
-      twitterLink
-      instagramLink
+      # twitterLink
+      # instagramLink
     }
   }
 `;

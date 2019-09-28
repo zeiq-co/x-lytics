@@ -142,7 +142,7 @@ class Footer extends React.Component {
                   {/* Note that external links still use `a` tags. */}
                   <a
                     target="_blank"
-                    href={contact.instagramLink}
+                    // href={contact.instagramLink}
                     rel="noopener noreferrer">
                     <span className="icon has-text-info">
                       <i className="fab fa-instagram" />
@@ -150,7 +150,7 @@ class Footer extends React.Component {
                   </a>
                   <a
                     target="_blank"
-                    href={contact.twitterLink}
+                    // href={contact.twitterLink}
                     rel="noopener noreferrer">
                     <span className="icon has-text-info">
                       <i className="fab fa-twitter-square" />
