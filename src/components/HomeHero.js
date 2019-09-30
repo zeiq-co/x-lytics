@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Section = styled.section`
   .columns {
@@ -48,11 +48,11 @@ class HomeHero extends React.Component {
                   <HelpText className="is-size-5-mobile">
                     {home.homePrimarySubtitle}
                   </HelpText>
-                  <Link
-                    to="/"
+                  <AnchorLink
+                    href="#contact"
                     className="button is-primary is-medium is-rounded has-text-weight-bold">
                     {home.homePrimaryButton}
-                  </Link>
+                  </AnchorLink>
                 </div>
               </section>
             </div>
