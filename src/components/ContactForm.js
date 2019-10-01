@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withFormik } from 'formik';
 import * as yup from 'yup';
+import swal from 'sweetalert';
+import axios from 'axios';
 
 const ContactForm = props => {
   const {
@@ -155,9 +157,22 @@ export default withFormik({
     message: yup.string().required('Message is required!'),
   }),
   handleSubmit: (values, { setSubmitting, props }) => {
-    // console.log('handle submit', values, props);
-    props.addContact(values);
+    console.log('handle submit', values, props);
     setSubmitting(false);
+    props.onSubmit(values);
+
+    axios
+      .post('https://www.zeiq.academy/.netlify/functions/send-email', values)
+      .then(response => {
+        console.log(response);
+        setSubmitting(false);
+        swal('Thank you! Our team will respond you soon.');
+      })
+      .catch(error => {
+        console.log(error);
+        setSubmitting(false);
+        swal('Failed to submit your form, please try again later');
+      });
   },
-  displayName: 'ContactUs', // helps with React DevTools
+  displayName: 'ContactForm', // helps with React DevTools
 })(ContactForm);
