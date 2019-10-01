@@ -5,6 +5,7 @@ module.exports = {
   author: 'Zeiq',
   description: '',
   siteUrl: 'https://www.xlytics.com',
+  lambdaUri: 'https://zeiq-academy.netlify.com/.netlify/functions',
   image: '/images/logo.svg',
   graphqlUri: '',
 

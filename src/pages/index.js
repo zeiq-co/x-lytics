@@ -10,7 +10,7 @@ import WorkProcess from '../components/WorkProcess';
 import OurWork from '../components/OurWork';
 import GuideInfo from '../components/GuideInfo';
 import ContactView from '../components/ContactView';
-import Contact from '../components/Contact';
+import ContactHome from '../components/ContactHome';
 
 export const indexQuery = graphql`
   query Home {
@@ -106,7 +106,7 @@ export default class IndexPage extends React.Component {
                 <OurWork home={home} ourWork={ourWork.edges} />
                 <GuideInfo home={home} />
                 <ContactView contact={contact} />
-                <Contact />
+                <ContactHome />
               </React.Fragment>
             );
           }}
