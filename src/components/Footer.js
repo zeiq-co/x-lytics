@@ -77,6 +77,16 @@ const Icons = styled.div`
   }
 `;
 
+const NavItems = [
+  { id: 1, name: 'Design Sprints', url: '/page/design-sprints' },
+  {
+    id: 2,
+    name: 'Design Sprint Training',
+    url: '/page/design-sprint-training',
+  },
+  { id: 3, name: 'About', url: '/page/about' },
+];
+
 class Footer extends React.Component {
   render() {
     const { contact } = this.props;
@@ -107,17 +117,17 @@ class Footer extends React.Component {
                 <Navigation>
                   <FooterHeading heading="NAVIGATION" />
                   <Link to="/" className="has-text-weight-bold">
-                    Design Sprints
-                  </Link>
-                  <Link to="/" className="has-text-weight-bold">
-                    Design Sprint Training
-                  </Link>
-                  <Link to="/" className="has-text-weight-bold">
-                    About
-                  </Link>
-                  <Link to="/" className="has-text-weight-bold">
                     Blog
                   </Link>
+                  <ul>
+                    {NavItems.map(item => (
+                      <li key={item.id} className="has-text-weight-bold">
+                        <Link to={item.url} className="has-text-white">
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </Navigation>
               </div>
               <InfoContainer className="column">
