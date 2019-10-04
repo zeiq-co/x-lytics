@@ -118,11 +118,11 @@ export default class Header extends React.Component {
                 </AnchorLink>
                 <div className="navbar-item">
                   <div className="buttons">
-                    <Link
-                      to="/contact"
+                    <AnchorLink
+                      href="#contact"
                       className="button is-rounded is-medium is-primary">
                       Contact Us
-                    </Link>
+                    </AnchorLink>
                   </div>
                 </div>
               </div>
