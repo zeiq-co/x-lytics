@@ -9,7 +9,6 @@ import Layout from '../components/Layout';
 import Heading from '../components/Heading';
 import { HTMLContent } from '../utils/helpers';
 import WorkProcessSteps from '../components/WorkProcessSteps';
-import WorkProcess from '../components/WorkProcess';
 
 const ImageWrapper = styled.div`
   margin-left: auto;
@@ -36,6 +35,22 @@ export const pageQuery = graphql`
       }
       imageTag
     }
+    allContentfulWorkItem {
+      edges {
+        node {
+          id
+          title
+          subtitle
+          buttonText
+          buttonUrl
+          icon {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -48,7 +63,10 @@ export default class Page extends React.Component {
   }
 
   render() {
-    const { contentfulPages: page } = this.props.data;
+    const {
+      contentfulPages: page,
+      allContentfulWorkItem: work,
+    } = this.props.data;
 
     return (
       <Layout>
@@ -67,6 +85,7 @@ export default class Page extends React.Component {
               content={page.content.internal.content}
               className="subtitle has-text-justified"
             />
+            <WorkProcessSteps work={work.edges} />
           </div>
         </section>
       </Layout>

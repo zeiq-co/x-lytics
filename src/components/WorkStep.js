@@ -22,13 +22,20 @@ const HelpText = styled.p`
   font-weight: 300;
   margin-bottom: 2.5rem;
   padding: 0rem 2.5rem;
+  min-height: 8rem;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    min-height: 0;
+  }
   @media only screen and (max-width: 1095px) and (min-width: 769px) {
     margin-top: 0;
     font-size: 16px;
     padding: 0;
   }
-  @media screen and (max-width: 768px) {
+  @media only screen and (max-width: 1800px) and (min-width: 1096px) {
+    margin-top: 0;
     padding: 0;
+    min-height: 8.5rem;
   }
 `;
 
