@@ -8,4 +8,3 @@ export const log = value => console.log(value); // eslint-disable-line
 export const HTMLContent = ({ content, className }) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
 );
-s;

@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import config from '../config';
-
 const Line = styled.div`
   height: 3px;
   width: 80px;
-  background-color: ${config.primaryColor};
+  background-color: ${props => props.theme.primaryColor};
   margin: 0.6rem auto 3rem auto;
 `;
 
