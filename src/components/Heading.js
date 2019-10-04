@@ -5,7 +5,6 @@ import styled from 'styled-components';
 const Line = styled.div`
   height: 3px;
   width: 80px;
-  background-color: ${props => props.theme.primaryColor};
   margin: 0.6rem auto 3rem auto;
 `;
 

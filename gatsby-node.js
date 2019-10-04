@@ -1,21 +1,21 @@
-const fs = require(`fs`);
+// const fs = require(`fs`);
 const path = require('path');
-const fetch = require('isomorphic-unfetch');
+// const fetch = require('isomorphic-unfetch');
 
-exports.onPreBootstrap = () => {
-  // fetch currency rates
-  const currencyApiKey = '63d77b57d7ac9e3b74d8';
-  fetch(
-    `http://free.currconv.com/api/v7/convert?q=CAD_USD,CAD_INR&compact=y&apiKey=${currencyApiKey}`,
-  )
-    .then(r => r.json())
-    .then(data => {
-      fs.writeFileSync(`./data/currency.json`, JSON.stringify(data, ``, 2));
-    })
-    .catch(error => {
-      console.log(error);
-    });
-};
+// exports.onPreBootstrap = () => {
+//   // fetch currency rates
+//   const currencyApiKey = '63d77b57d7ac9e3b74d8';
+//   fetch(
+//     `http://free.currconv.com/api/v7/convert?q=CAD_USD,CAD_INR&compact=y&apiKey=${currencyApiKey}`,
+//   )
+//     .then(r => r.json())
+//     .then(data => {
+//       fs.writeFileSync(`./data/currency.json`, JSON.stringify(data, ``, 2));
+//     })
+//     .catch(error => {
+//       console.log(error);ssss
+//     });
+// };
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -25,6 +25,7 @@ exports.createPages = ({ actions, graphql }) => {
       allContentfulPages {
         edges {
           node {
+            id
             title
             slug
             content {
@@ -32,6 +33,12 @@ exports.createPages = ({ actions, graphql }) => {
                 content
               }
             }
+            image {
+              file {
+                url
+              }
+            }
+            imageTag
           }
         }
       }

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import WorkStep from './WorkStep';
+import WorkProcessSteps from './WorkProcessSteps';
 
 const HelpText = styled.p`
   margin-top: 1.5rem;
@@ -36,15 +37,7 @@ class WorkProcess extends React.Component {
             </div>
           </div>
           <div className="columns">
-            {work.map(item => (
-              <WorkStep
-                key={item.node.id}
-                img={item.node.icon.file.url}
-                title={item.node.title}
-                subtitle={item.node.subtitle}
-                btnText={item.node.buttonText}
-              />
-            ))}
+            <WorkProcessSteps work={work} />
           </div>
         </div>
       </section>
