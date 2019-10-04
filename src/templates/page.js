@@ -8,6 +8,8 @@ import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import Heading from '../components/Heading';
 import { HTMLContent } from '../utils/helpers';
+import WorkProcessSteps from '../components/WorkProcessSteps';
+import WorkProcess from '../components/WorkProcess';
 
 const ImageWrapper = styled.div`
   margin-left: auto;

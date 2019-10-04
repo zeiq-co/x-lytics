@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const Wrapper = styled.div`
   padding: 3rem 3rem 0rem;
@@ -31,14 +32,16 @@ const HelpText = styled.p`
   }
 `;
 
-const WorkStep = ({ img, alt, title, subtitle, btnText }) => (
+const WorkStep = ({ img, alt, title, subtitle, btnText, work }) => (
   <Wrapper className="column has-text-centered">
     <img src={img} alt={alt} />
     <h1 className="title is-4">{title}</h1>
     <HelpText>{subtitle}</HelpText>
-    <a className="button is-primary is-large is-fullwidth is-rounded has-text-weight-bold">
+    <Link
+      to={`/page/${work.buttonUrl}`}
+      className="button is-primary is-large is-fullwidth is-rounded has-text-weight-bold">
       {btnText}
-    </a>
+    </Link>
   </Wrapper>
 );
 

@@ -43,6 +43,7 @@ export const indexQuery = graphql`
           title
           subtitle
           buttonText
+          buttonUrl
           icon {
             file {
               url
