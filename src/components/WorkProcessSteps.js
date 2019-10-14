@@ -14,7 +14,7 @@ class WorkProcessSteps extends React.Component {
             img={item.node.icon.file.url}
             title={item.node.title}
             subtitle={item.node.subtitle}
-            btnText={item.node.buttonText}
+            // btnText={item.node.buttonText}
           />
         ))}
       </div>

@@ -106,7 +106,7 @@ export default class IndexPage extends React.Component {
                 <WorkProcess home={home} work={work.edges} />
                 <OurWork home={home} ourWork={ourWork.edges} />
                 <GuideInfo home={home} />
-                <ContactView contact={contact} />
+                {/* <ContactView contact={contact} /> */}
                 <ContactHome />
               </React.Fragment>
             );

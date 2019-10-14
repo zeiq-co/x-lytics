@@ -108,7 +108,7 @@ export default class Header extends React.Component {
                   Design Sprints
                 </AnchorLink>
                 <AnchorLink href="#our-work" className="navbar-item">
-                  Design Sprint Training
+                  Training
                 </AnchorLink>
                 <AnchorLink href="#guide-info" className="navbar-item">
                   About

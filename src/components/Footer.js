@@ -99,38 +99,6 @@ class Footer extends React.Component {
                 <h1 className="title is-1 is-size-3-mobile">
                   {contact.footerHeading}
                 </h1>
-                <h4 className="has-text-weight-bold space">
-                  {contact.footerSubheading}
-                </h4>
-                <FooterHeading heading="COMPANY NUMBER" />
-                <PolicyWrapper>
-                  <h4 className="has-text-weight-bold margin">
-                    {contact.companyContact}
-                  </h4>
-                  <Link to="/" className="has-text-weight-bold margin">
-                    Privacy Policy
-                  </Link>
-                  <Link to="/" className="has-text-weight-bold">
-                    Cookie Policy
-                  </Link>
-                </PolicyWrapper>
-                <Navigation>
-                  <FooterHeading heading="NAVIGATION" />
-                  <Link to="/" className="has-text-weight-bold">
-                    Blog
-                  </Link>
-                  <ul>
-                    {NavItems.map(item => (
-                      <li key={item.id} className="has-text-weight-bold">
-                        <Link to={item.url} className="has-text-white">
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </Navigation>
-              </div>
-              <InfoContainer className="column">
                 <FooterHeading heading="NEW BUSINESS" size />
                 <a href={`mailto:${contact.email}`} className="is-size-4">
                   {contact.emailAddress}
@@ -147,9 +115,10 @@ class Footer extends React.Component {
                 <h3 className="title is-4 is-size-5-mobile">
                   {contact.addressTwo}
                 </h3>
-                <FooterHeading heading="SOCIAL" size />
+              </div>
+              <InfoContainer className="column">
+                {/* <FooterHeading heading="SOCIAL" size />
                 <Icons>
-                  {/* Note that external links still use `a` tags. */}
                   <a
                     target="_blank"
                     // href={contact.instagramLink}
@@ -166,7 +135,7 @@ class Footer extends React.Component {
                       <i className="fab fa-twitter-square" />
                     </span>
                   </a>
-                </Icons>
+                    </Icons> */}
               </InfoContainer>
             </div>
           </footer>

@@ -44,11 +44,11 @@ const WorkStep = ({ img, alt, title, subtitle, btnText, work }) => (
     <img src={img} alt={alt} />
     <h1 className="title is-4">{title}</h1>
     <HelpText>{subtitle}</HelpText>
-    <Link
+    {/* <Link
       to={`/page/${work.buttonUrl}`}
       className="button is-primary is-large is-fullwidth is-rounded has-text-weight-bold">
       {btnText}
-    </Link>
+    </Link> */}
   </Wrapper>
 );
 
