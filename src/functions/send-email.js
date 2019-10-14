@@ -53,7 +53,8 @@ const sendEmail = async (event, context, callback) => {
   await transporter.sendMail({
     // const info =
     from: `Xlytics <info@xlytics.com>`,
-    to: 'info@xlytics.com',
+    to:
+      'info@xlytics.com, rkhalid@x-lytics.com, kcummins@x-lytics.com, rbeardsworth@x-lytics.com, rarch@x-lytics.com',
     subject: 'New contact form submission',
     text: event.body,
   });
