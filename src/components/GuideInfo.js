@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  background-color: ${props => props.theme.backgroundDark};
+  // background-color: ${props => props.theme.backgroundDark};
   .column:last-child {
     @media screen and (max-width: 768px) {
       display: flex;

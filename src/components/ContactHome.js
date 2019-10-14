@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ContactForm from './ContactForm';
 
 const Container = styled.section`
-  background-color: #f4f4f4;
+  // background-color: #f4f4f4;
   @media only screen and (max-width: 768px) {
     padding: 1rem 1.5rem 3rem 1.5rem;
   }
