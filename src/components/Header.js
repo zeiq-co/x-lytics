@@ -83,7 +83,7 @@ export default class Header extends React.Component {
             aria-label="main navigation">
             <div className="navbar-brand">
               <Link className="navbar-item" to="/">
-                <img src="/images/logo.svg" alt="x-lytics logo" />
+                <img src="/images/x.svg" alt="x-lytics logo" />
               </Link>
               <a
                 href="#"
@@ -116,7 +116,7 @@ export default class Header extends React.Component {
                 <AnchorLink href="#contact-view" className="navbar-item">
                   Blog
                 </AnchorLink>
-                <div className="navbar-item">
+                {/* <div className="navbar-item">
                   <div className="buttons">
                     <AnchorLink
                       href="#contact"
@@ -124,7 +124,7 @@ export default class Header extends React.Component {
                       Contact Us
                     </AnchorLink>
                   </div>
-                </div>
+              </div> */}
               </div>
             </div>
           </nav>
