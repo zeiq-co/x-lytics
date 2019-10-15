@@ -53,17 +53,16 @@ const Container = styled.section`
 
 class ContactHome extends React.Component {
   render() {
+    const { home } = this.props;
     return (
       <Container id="contact" className="section">
         <div className="container">
           <div className="columns">
             <div className="column has-text-centered is-7">
-              <h1 className="title is-size-4-mobile">GET IN TOUCH</h1>
-              <h4 className="subtitle is-6 text">
-                ECO House, Lea Road, Waltham Abbey, Hertfordshire, EN9 1AS
-              </h4>
-              <h4 className="subtitle is-6 text">info@xlytics.com</h4>
-              <h4 className="subtitle is-6 text">08700 777 555</h4>
+              <h1 className="title is-size-4-mobile">{home.contactTitle}</h1>
+              <h4 className="subtitle is-6 text">{home.contactAddress}</h4>
+              <h4 className="subtitle is-6 text">{home.contactEmail}</h4>
+              <h4 className="subtitle is-6 text">{home.contactNumber}</h4>
             </div>
             <div className="column">
               <div className="field is-horizontal">

@@ -35,6 +35,10 @@ export const indexQuery = graphql`
           url
         }
       }
+      contactTitle
+      contactAddress
+      contactEmail
+      contactNumber
     }
     allContentfulWorkItem(sort: { order: ASC, fields: listingOrder }) {
       edges {
@@ -108,7 +112,7 @@ export default class IndexPage extends React.Component {
                 <OurWork home={home} ourWork={ourWork.edges} />
                 <GuideInfo home={home} />
                 {/* <ContactView contact={contact} /> */}
-                <ContactHome />
+                <ContactHome home={home} />
               </React.Fragment>
             );
           }}
