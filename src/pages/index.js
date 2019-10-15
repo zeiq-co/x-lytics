@@ -9,7 +9,7 @@ import HomeHero from '../components/HomeHero';
 import WorkProcess from '../components/WorkProcess';
 import OurWork from '../components/OurWork';
 import GuideInfo from '../components/GuideInfo';
-import ContactView from '../components/ContactView';
+// import ContactView from '../components/ContactView';
 import ContactHome from '../components/ContactHome';
 
 export const indexQuery = graphql`
@@ -36,7 +36,7 @@ export const indexQuery = graphql`
         }
       }
     }
-    allContentfulWorkItem {
+    allContentfulWorkItem(sort: { order: ASC, fields: listingOrder }) {
       edges {
         node {
           id
@@ -52,9 +52,10 @@ export const indexQuery = graphql`
         }
       }
     }
-    allContentfulOurWork {
+    allContentfulOurWork(sort: { order: ASC, fields: listingOrder }) {
       edges {
         node {
+          id
           title
           image {
             file {
