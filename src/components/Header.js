@@ -48,6 +48,13 @@ const Section = styled.section`
   }
 `;
 
+const AnchorStyled = styled(AnchorLink)`
+  :focus-within {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+`;
+
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -104,25 +111,25 @@ export default class Header extends React.Component {
             </div>
             <div className={isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
               <div className="navbar-end">
-                <AnchorLink href="#work-process" className="navbar-item">
+                <AnchorStyled href="#work-process" className="navbar-item">
                   Design Sprints
-                </AnchorLink>
-                <AnchorLink href="#our-work" className="navbar-item">
+                </AnchorStyled>
+                <AnchorStyled href="#our-work" className="navbar-item">
                   Training
-                </AnchorLink>
-                <AnchorLink href="#guide-info" className="navbar-item">
+                </AnchorStyled>
+                <AnchorStyled href="#guide-info" className="navbar-item">
                   About
-                </AnchorLink>
-                <AnchorLink href="#contact-view" className="navbar-item">
+                </AnchorStyled>
+                <AnchorStyled href="#contact-view" className="navbar-item">
                   Blog
-                </AnchorLink>
+                </AnchorStyled>
                 {/* <div className="navbar-item">
                   <div className="buttons">
-                    <AnchorLink
+                    <AnchorStyled
                       href="#contact"
                       className="button is-rounded is-medium is-primary">
                       Contact Us
-                    </AnchorLink>
+                    </AnchorStyled>
                   </div>
               </div> */}
               </div>
