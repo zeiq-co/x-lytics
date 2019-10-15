@@ -50,7 +50,7 @@ class HomeHero extends React.Component {
                   </HelpText>
                   <AnchorLink
                     href="#contact"
-                    className="button is-primary is-medium is-rounded has-text-weight-bold">
+                    className="button is-primary is-medium is-rounded has-text-weight-normal is-size-4">
                     {home.homePrimaryButton}
                   </AnchorLink>
                 </div>

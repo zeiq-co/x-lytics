@@ -162,7 +162,7 @@ export default withFormik({
     props.onSubmit(values);
 
     axios
-      .post('https://www.zeiq.academy/.netlify/functions/send-email', values)
+      .post('https://www.zeiq.academy/.netlify/functions/send-email', values) // TODO: post link will be added by parminder later on.
       .then(response => {
         console.log(response);
         setSubmitting(false);
