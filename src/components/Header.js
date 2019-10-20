@@ -49,6 +49,7 @@ const Section = styled.section`
 `;
 
 const AnchorStyled = styled(AnchorLink)`
+  font-weight: 200 !important;
   :focus-within {
     background-color: #fff !important;
     color: #000 !important;
