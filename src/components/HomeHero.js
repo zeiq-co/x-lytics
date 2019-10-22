@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import Button from './Button';
+
 const Section = styled.section`
   .columns {
     @media screen and (max-width: 768px) {
@@ -48,10 +50,8 @@ class HomeHero extends React.Component {
                   <HelpText className="is-size-5-mobile">
                     {home.homePrimarySubtitle}
                   </HelpText>
-                  <AnchorLink
-                    href="#contact"
-                    className="button is-primary is-medium is-rounded has-text-weight-normal is-size-4">
-                    {home.homePrimaryButton}
+                  <AnchorLink href="#contact">
+                    <Button>{home.homePrimaryButton}</Button>
                   </AnchorLink>
                 </div>
               </section>

@@ -4,6 +4,7 @@ import { withFormik } from 'formik';
 import * as yup from 'yup';
 import swal from 'sweetalert';
 import axios from 'axios';
+import Button from './Button';
 
 const ContactForm = props => {
   const {
@@ -116,12 +117,7 @@ const ContactForm = props => {
           )}
         </div>
       </div>
-      <button
-        type="submit"
-        className="button is-rounded is-large is-primary is-fullwidth has-text-weight-bold"
-        disabled={isSubmitting}>
-        Submit
-      </button>
+      <Button isFullwidth>Submit</Button>
     </form>
   );
 };

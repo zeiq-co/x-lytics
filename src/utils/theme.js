@@ -62,7 +62,6 @@ const GlobalStyle = createGlobalStyle`
   }
   .button {
     font-family: ${theme.primaryFontFamily};
-    padding: 1.5rem;
   }
   .button.is-rounded {
     padding-left: 1.5em;

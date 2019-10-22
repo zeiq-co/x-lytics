@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from './Button';
 
 const Section = styled.section`
   // background-color: ${props => props.theme.backgroundDark};
@@ -37,9 +38,7 @@ class GuideInfo extends React.Component {
               <p className="is-size-4 has-text-centered-mobile">
                 {home.guideSubtitle}
               </p>
-              <a className="button is-primary is-large is-rounded has-text-weight-bold">
-                {home.guideButton}
-              </a>
+              <Button>{home.guideButton}</Button>
             </div>
             <div className="column">
               <img src={home.guideImage.file.url} alt="Guide Book" />
